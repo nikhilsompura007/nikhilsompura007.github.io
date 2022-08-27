@@ -4,7 +4,8 @@ var globalFile=[];
 var tempdisplayfile=[];
 
 function uploadFile()
-{
+{ 
+  globalFile=[];
   let x=document.getElementById("upload_file");
   let txt="";
   var file=[];
@@ -112,8 +113,10 @@ function FilterValues(Filterx)
         
       }
      }
-     else{
-      
+     else
+     {
+      displayoutput=displayoutput+element+"\n";
+      logline=logline+1;
      }
     }
     document.getElementById("loglines").innerHTML=logline;
@@ -143,4 +146,9 @@ else
 {
   document.getElementById("datehere").innerHTML="";
 }
+}
+
+function ResetWindow()
+{
+  location.reload();
 }
