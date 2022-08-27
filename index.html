@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>Log Analysis Tool</title>
+    <script type="text/javascript" src="analysis.js"></script>
+</head>
+
+<form>
+    <body background="silver">
+        <div id="header" style="text-align: center;"><h1>Log Analysis Tool</h1> </div>
+        <div id="upload_div" style="text-align: center;"><input type="file" id="upload_file" multiple><input type="button" id="submit" value="submit" onclick="uploadFile()"><p>Log Lines:</p><p id="loglines"></p></div><br>
+        <div style="text-align: center;" ><input type="text" id="filterValue" placeholder="Filter Here" onchange="FrontEndFilter()"><input type="text" id="filterValue2" placeholder="Filter Here" onchange="FrontEndFilter()"> Epoch to UTC coverter <input type="datetime" id="epoch" onchange="dateConvert()"><p id="datehere"></p></div><br>
+        <div id="result" id="result_div"><p id="result"></p></div>
+    </body>
+</form>
+
+</html>
