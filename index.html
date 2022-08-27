@@ -2,14 +2,15 @@
 <head>
     <title>Log Analysis Tool</title>
     <script type="text/javascript" src="analysis.js"></script>
+    <script type="text/javascript" src="node_modules/dompurify/dist/purify.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <form>
     <body style="background-image:url('images/background.png');">
         <div id="header" style="text-align: center;  width: 100%; height: 20%;" ><h1>Log Analysis Tool</h1> Log Lines:<p id="loglines"></p> </div>
-        <div id="upload_div" style="text-align: center;"><input type="file" id="upload_file" multiple><input type="button" id="submit" value="submit" onclick="uploadFile()"></p></div><br>
-        <div style="text-align: center;" ><input type="text" id="filterValue" placeholder="Filter Here" onchange="FrontEndFilter()"><input type="text" id="filterValue2" placeholder="Filter Here" onchange="FrontEndFilter()"> Epoch to UTC coverter <input type="datetime" id="epoch" onchange="dateConvert()"><p id="datehere"></p></div><br>
+        <div id="upload_div" style="text-align: center;"><input type="file" required="required" id="upload_file" multiple accept=".log"   /><input type="button" id="submit" value="submit" onclick="uploadFile()"></p></div><br>
+        <div style="text-align: center;" ><input type="text" id="filterValue" placeholder="Filter Here" onchange="FrontEndFilter()" ><input type="text" id="filterValue2" placeholder="Filter Here" onchange="FrontEndFilter()" > Epoch to UTC coverter <input type="number" id="epoch" onchange="dateConvert()"><p id="datehere"></p></div><br>
         <div id="result" id="result_div"><p id="result"></p></div>
     </body>
 </form>

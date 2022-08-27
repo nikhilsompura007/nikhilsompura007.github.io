@@ -1,3 +1,4 @@
+const { sanitize } = require("dompurify");
 
 var globalFile=[];
 var tempdisplayfile=[];
@@ -44,14 +45,25 @@ function displayResult(file)
 
 }
 
+function InputSanitize(inputString)
+{
+  let inputStringClean;
+  inputStringClean=DOMPurify.sanitize(inputString);
+  return inputStringClean; 
+}
+
 function FrontEndFilter()
 {
   let output=[];
   console.log("hello");
   let filterArray=[];
-  filterArray.push(document.getElementById("filterValue").value);
-  filterArray.push(document.getElementById("filterValue2").value);
-  console.log(filterArray);
+
+  document.getElementById("filterValue").value
+  filterArray.push(
+  response=InputSanitize(document.getElementById("filterValue").value)
+  );
+  filterArray.push(response=InputSanitize(document.getElementById("filterValue2").value));
+ console.log(filterArray);
   output=FilterValues(filterArray);
   document.getElementById("result").innerHTML=TableRender(output);
 }
@@ -75,13 +87,21 @@ function FilterValues(Filterx)
 {
   let FilterText=Filterx;
   let logline=0;
+ 
+  if(globalFile.length<1)
+  {
+    alert("Please upload the Log files");
+  }
+  else
+  {
   tempdisplayfile=globalFile.split('\n');
+  }
   let displayoutput=[]; 
   tempdisplayfile.forEach(element => {
     
     for(i=0;i<FilterText.length-1;i++)
     { 
-     if(FilterText[i]!="")
+     if(FilterText[i]!="" || FilterText[i+1]!="")
      {
       console.log("Not NULL")
       if(element.includes(FilterText[i]) && element.includes(FilterText[i+1]))
@@ -91,7 +111,11 @@ function FilterValues(Filterx)
       }
       else
       {
+        
       }
+     }
+     else{
+      
      }
     }
     document.getElementById("loglines").innerHTML=logline;
