@@ -63,7 +63,6 @@ function FrontEndFilter()
   response=InputSanitize(document.getElementById("filterValue").value)
   );
   filterArray.push(response=InputSanitize(document.getElementById("filterValue2").value));
- console.log(filterArray);
   output=FilterValues(filterArray);
   document.getElementById("result").innerHTML=TableRender(output);
 }
@@ -103,7 +102,6 @@ function FilterValues(Filterx)
     { 
      if(FilterText[i]!="" || FilterText[i+1]!="")
      {
-      console.log("Not NULL")
       if(element.includes(FilterText[i]) && element.includes(FilterText[i+1]))
       {
         displayoutput=displayoutput+element+"\n"; 
