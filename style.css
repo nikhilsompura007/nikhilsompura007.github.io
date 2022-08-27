@@ -1,3 +1,9 @@
+#submit:hover
+{
+    background-color:brown;
+    color: white;
+}
+
 input
 {
     background-color: antiquewhite;
