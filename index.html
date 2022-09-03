@@ -7,12 +7,11 @@
 </head>
 
 <form>
-    <body style="background-image:url('images/background.png');">
-        <div><input type="button" value="Reset" id="reset" onclick="ResetWindow()" style="position: right;"></div>
-        <div id="header" style="text-align: center;  width: 100%; height: 20%;" ><table style="width: 100%; background: transparent;"><th><h1>Log Analysis Tool</h1></th><tr><td><h2><a>About</a></h2></td><td></td><td> Log Lines:<p id="loglines"></p></td></tr></table></div>
-        <div id="upload_div" style="text-align: center;"><input type="file" required="required" id="upload_file" multiple accept=".log"   /><input type="button" id="submit" value="submit" onclick="uploadFile()"></p></div><br>
-        <div style="text-align: center;" ><input type="text" id="filterValue" placeholder="Filter Here" onchange="FrontEndFilter()" ><input type="text" id="filterValue2" placeholder="Filter Here" onchange="FrontEndFilter()" > Epoch to UTC coverter <input type="number" id="epoch" onchange="dateConvert()"><p id="datehere"></p></div><br>
-        <div id="result" id="result_div"><p id="result"></p></div>
+    <body>
+    <table style="border: 1px; width: 100%; height: 100%;">
+        <th><div id="homesidebar"><ul><li><a id="navbar">Home</a></li><li>|&nbsp;&nbsp;&nbsp;</li><li><a id="navbar">About Us</a></li>|&nbsp;&nbsp;&nbsp;<li><a id="navbar">Blogs</a></li></ul></div></th>
+        <tr id="logodiv"><td><div></div></td></tr>
+    </table>
     </body>
 </form>
 
