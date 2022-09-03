@@ -14,43 +14,70 @@ input
 body
 {
    font-size: medium;
-   color:brown;
-   background-color: darkblue;
+   color:white;
+   background-image: url('images/background2.jpg');
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
 }
 table
 {
     color: white;
-    background-color: darkblue;
+    background-image: url('images/Logo_Background.jpg');
+    width: 100%; 
+    height: 100%;
+    background-repeat: no-repeat;
 }
 p
 {
     background-color: azure;
 }
-#logodiv
+#maindiv
 {
- background-image: url('images/Logo_Background.jpg');
- background-repeat: no-repeat;
- width: 100%; 
+ width: 100%;
  height: 100%;
+}
+
+#logodiv
+{ 
+ background-repeat: space;
+ width: 50%;
+ height: 100%;
+ background-image: url('images/Logo_Background.jpg');
+ float: left;
+ background-repeat: no-repeat;
+ background-size: cover;
+ 
 
 }
 #homesidebar
 {
  background-color:transparent;
  width: 100%; 
- height: 50%;
+ height: 10%;
 
 }
 
 #navbar
 {
     background-color: transparent;
+    width: auto;
+    height: 5%;
+    border: 1px;
+   
+}
+#homesidebar
+{
+    transition: top 0.3s;
+    display: block;
+    position: fixed;
+    
 }
 #navbar:hover
 {
-    background-color: darkslateblue;
+    
     color: white;
+    text-decoration: underline;
+    
+    
 }
 li
 {
@@ -66,4 +93,21 @@ ul
   padding: 0;
   width: 100%;
   white-space: initial;
+}
+#newssection
+{
+    width: 50%; 
+    height: 100%;    
+    float: right;
+    background-image: url('images/blog-word-cloud1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#newssection:hover
+{
+    width: 50%; 
+    height: 100%;    
+    float: right;
+    background-color: blueviolet;
+
 }
