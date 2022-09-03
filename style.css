@@ -69,7 +69,13 @@ p
     transition: top 0.3s;
     display: block;
     position: fixed;
+    animation: spin 2s linear alternate;
     
+}
+@keyframes spin 
+{
+    0% { opacity: 0%; }
+    100% {  opacity: 90%;}
 }
 #navbar:hover
 {
