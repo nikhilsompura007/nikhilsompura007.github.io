@@ -109,6 +109,7 @@ ul
     background-size: cover;
     background-repeat: no-repeat;
     mix-blend-mode: screen;
+    color:black;
 }
 #newssection:hover
 {
@@ -117,4 +118,7 @@ ul
     float: right;
     background-color: blueviolet;
 
+}
+@media only screen and (orientation: portrait) {
+    
 }
