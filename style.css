@@ -108,6 +108,7 @@ ul
     background-image: url('images/blog-word-cloud1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    mix-blend-mode: screen;
 }
 #newssection:hover
 {
